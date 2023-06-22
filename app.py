@@ -35,6 +35,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
+# Initializing the database tables based on the defined models within a Flask application
 with app.app_context():
     db.create_all()
 
