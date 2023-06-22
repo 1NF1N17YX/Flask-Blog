@@ -16,11 +16,13 @@ flask run
 
 # setting up version control
 
+```bash
 $ git config --global user.name "Your Name"
 $ git config --global user.email "you@youraddress.com"
 $ git config --global push.default matching
 $ git config --global alias.co checkout
 $ git init
+```
 
 # Flask migration
 
