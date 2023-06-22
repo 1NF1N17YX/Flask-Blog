@@ -5,6 +5,8 @@ pip install -r requirements.txt
 
 # Run the server
 flask run
+## OR
+./build.sh
 
 # Screenshots
 
