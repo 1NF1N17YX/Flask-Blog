@@ -1,0 +1,143 @@
+h1 {
+    color: rgba(240, 255, 255, 0.842);
+    font-size: 50px;
+}
+
+body {
+    /* background: #f4f4f4; */
+    /* background-color: red; */
+    background: url('/static/images/space.jpg');
+}
+
+#demo {
+    font-size: 42px;
+    color: aqua;
+}
+
+.img {
+    border-radius: 50%;
+}
+
+.login {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    /* background-color: rgb(71, 16, 160) !important; */
+    background-color: rgba(25, 24, 26, 0.637) !important;
+}
+
+.input {
+    border-radius: 50px;
+    width: 22rem;
+    align-items: center;
+    padding: 15px;
+}
+
+/* .input::placeholder {
+    margin-left: 20px;
+} */
+
+.login_title {
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+    color: rgb(239, 248, 250);
+}
+
+.center {
+    margin-top: 140px;
+}
+
+.login_btn {
+    padding: 8px;
+    width: 150px;
+    border-radius: 50px;
+    background-color: azure ;
+    color: black;
+}
+
+.login_btn:hover {
+    background-color: rgba(25, 24, 26, 0.637);
+}
+
+ 
+/* @media (min-width: 1000px) {
+  .lilogin {
+    margin-right: 660px !important;
+  }
+} */
+
+.nav_color {
+    background-color: rgba(25, 24, 26, 0.637) !important;
+}
+
+
+.nbar_search {
+    border-radius: 50px !important;
+    /* color: rgba(127, 255, 212, 0.849); */
+    color: rgb(128, 128, 128);
+    background-color: rgb(49, 13, 35);
+}
+.nbar_search:hover {
+    background-color: rgba(49, 4, 38, 0.733);
+    color: gray;
+}
+
+.search {
+    border-radius: 14px;
+    background-color: rgb(223, 217, 211);
+}
+
+.white {
+    color: rgb(133, 146, 146);
+}
+
+/**************************************************/
+
+#register {
+    background-color: rgba(25, 24, 26, 0.637) !important;
+    width: 800px;
+    justify-content: center;
+    display: flex;
+}
+
+#registerInput {
+    width: 500px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+#registerBtn {
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    width: 100px;
+}
+
+#registerBtn:hover {
+    color: white;
+    background-color: rgba(34, 32, 36, 0.637);
+}
+
+/* btn-outline-success  */
+/* opacity */
+
+/**************************************************/
+
+#postTitle {
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: blueviolet;
+}
+
+#dashboard {
+    color: azure;
+}
+
+#addpost {
+    color: rgba(240, 255, 255, 0.842);
+}
+
+.error {
+    color: red;
+}

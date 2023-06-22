@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% for message in get_flashed_messages() %}
+
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    {% endfor %}
+        <center class="center">
+            <div class="login_container">
+                <h1 style="font-size: 30px; color: rgb(239, 248, 250);">Welcome To The Blog</h1>
+                 <br/>
+                <div class="shadow p-3 mb-5 bg-body-tertiary rounded login">
+                    <form method="post">
+                        <h3 class="login_title">User Login</h3>
+                        <br>
+                        {{ form.hidden_tag() }}
+                        <!-- {{ form.username.label(class="form-label ") }} -->
+                        <!-- {{ form.username(class="form-control input placeholder-style", style="margin-left: 20px;", placeholder="User Name")  }} -->
+                        <div class="input-field-wrapper">
+                            <input type="text" name="username" placeholder="User Name" class="form-control input" id="username-input">
+                        </div>
+                        <br/>        
+                        <!-- {{ form.password.label(class="form-label") }} -->
+                        <!-- {{ form.password(class="form-control input placeholder-style", placeholder="Password") }} -->
+                        <div class="input-field-wrapper">
+                            <input type="password" name="password" placeholder="Password" class="form-control input" id="username-input">
+                        </div>
+                        <br/>
+                        <br>
+                        {{ form.submit(class="btn btn-secondary login_btn")}}
+                        <br>
+                        <br>
+                    </form>
+                </div>
+                <br/><br/><br/>
+            </center>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% for message in get_flashed_messages() %}
+
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    {% endfor %}
+
+    <!-- {% if name %}
+        <h1>Hello {{ name|capitalize }}!!</h1>
+        <br/>
+        <br/><br/>
+        <table class="table table-hover table-bordered table-striped">
+            {% for our_user in our_users %}
+                <tr>
+                    <td>
+                        {{ our_user.id}}. <a href="{{ url_for('update', id=our_user.id) }}">{{ our_user.name}}</a> - {{ our_user.email }} - {{our_user.username}} - {{ our_user.favorite_color }} <a href="{{ url_for('delete', id=our_user.id) }}">Delete</a><br/>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table> -->
+
+    <!-- {% else %} -->
+        <center>
+            <br><br><br><br>
+            <div class="shadow p-3 mb-5 bg-body-tertiary rounded" id="register">
+               
+                <form method="post">
+                    <br>
+                    <h1 style="color:azure; font-size: 50px;">Register:</h1>
+                    <br>
+                    <br>
+                    {{ form.hidden_tag() }}
+                    <!-- {{ form.name.label(class="form-label") }} -->
+                    {% for error in form.name.errors %}
+                        <span class="error">{{ error }}</span>
+                    {% endfor %}
+                    {{ form.name(class="form-control", placeholder="Name", id="registerInput") }}
+                    <br/>
+
+                    <!-- {{ form.username.label(class="form-label") }} -->
+                    {% for error in form.username.errors %}
+                        <span class="error">{{ error }}</span>
+                    {% endfor %}
+                    {{ form.username(class="form-control", placeholder="UserName", id="registerInput") }}
+                    <br/>
+
+                    {{ form.hidden_tag() }}
+                    <!-- {{ form.email.label(class="form-label") }} -->
+                    {% for error in form.email.errors %}
+                        <span class="error">{{ error }}</span>
+                    {% endfor %}
+                    {{ form.email(class="form-control", placeholder="Email", id="registerInput") }}
+                    <br/>
+
+                    <!-- {{ form.favorite_color.label(class="form-label") }} -->
+                    {{ form.favorite_color(class="form-control", placeholder="Favorite Color", id="registerInput") }}
+                    <br/>
+                    {% for error in form.password_hash.errors %}
+                        <span class="error">{{ error }}</span>
+                    {% endfor %}
+                    <!-- {{ form.password_hash.label(class="form-label") }} -->
+                    {{ form.password_hash(class="form-control", placeholder="Password", id="registerInput") }}
+                    <br/>
+
+                    <!-- {{ form.password_hash2.label(class="form-label") }} -->
+                    {{ form.password_hash2(class="form-control", placeholder="Confirm", id="registerInput") }}
+                    <br/>
+
+                    {{ form.submit(class="btn btn-secondary", id="registerBtn") }}
+                    <br><br>
+                </form>
+            </div>
+            <br/><br/><br/>
+        </center>
+        
+        <!-- <table class="table table-hover table-bordered table-striped">
+            {% for our_user in our_users %}
+            <tr>
+                <td>
+                    {{ our_user.id }}. <a href="{{ url_for('update', id=our_user.id) }}">{{ our_user.name }}</a> - {{our_user.username}} - {{ our_user.email }} - {{ our_user.favorite_color }} - PW: {{ our_user.password_hash }} <a href="{{ url_for('delete', id=our_user.id) }}">Delete</a><br/>
+                </td>
+            </tr>
+            {% endfor %}
+        </table> -->
+
+    <!-- {% endif %} -->
+{% endblock %}

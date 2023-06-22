@@ -1,18 +1,25 @@
-<h1>Hello world!</h1>
+{% extends "base.html" %}
 
-<p>this my webpage!</p>
+{% block content %}
+    <br>
+    {% for post in posts %}
+        <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+            <h2><a href="{{ url_for('post', id=post.id) }}" id="postTitle">{{ post.title }}</a></h2>
+            <small>By: {{ post.poster.name }} <br/> 
+            {{ post.date_posted }}</small><br/><br/>
 
-<p>my name is {{ first_name }}</p>
+            {{ post.content|safe }} <br/><br/>
 
-<p>{{ stuff|striptags|title }}</p>
+            <a href="{{ url_for('post', id=post.id) }}" class="btn btn-outline-secondary btn-sm">View Post</a>
 
-{% for topping in favorite_pizza %}
-    {% if topping == 41 %}
-        {{ topping + 100 }}
-    {% else%}
-        {{ topping }} </br>
-    {% endif %}
-{% endfor %}
+            {% if post.poster_id == current_user.id or current_user.id == 37 %}
 
-</br></br>
-{{ favorite_pizza.3 + 10 }}
+                <a href="{{ url_for('delete_post', id=post.id) }}" class="btn btn-outline-danger btn-sm">Delete</a>
+                <a href="{{ url_for('edit_post', id=post.id) }}" class="btn btn-outline-secondary btn-sm">Edit Post</a>
+
+            {% endif %}
+            <br><br>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}
