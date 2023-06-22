@@ -26,10 +26,10 @@ $ git init
 
 # Flask migration
 
-pip install Flask-Migrate
+`pip install Flask-Migrate`
 
 ## It's creating a directory to hold all migration files
-flask --app app db init
+`flask --app app db init`
 
 # Make initial migration
 flask --app app db migrate -m 'Initial Migration'
