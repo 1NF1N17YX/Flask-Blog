@@ -38,6 +38,6 @@ $ git init
 `flask --app app db upgrade`
 
 # WTF Resources:
-URLs
+URLs <br />
 https://flask-wtf.readthedocs.io/en/1.0.x/ <br />
 https://wtforms.readthedocs.io/en/3.0.x/
