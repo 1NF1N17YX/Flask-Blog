@@ -39,5 +39,5 @@ $ git init
 
 # WTF Resources:
 URLs
-https://flask-wtf.readthedocs.io/en/1.0.x/
+https://flask-wtf.readthedocs.io/en/1.0.x/ <br />
 https://wtforms.readthedocs.io/en/3.0.x/
