@@ -2,11 +2,11 @@
 
 # Environment
 pip install -r requirements.txt
+## OR
+./build.sh
 
 # Run the server
 flask run
-## OR
-./build.sh
 
 # Screenshots
 
