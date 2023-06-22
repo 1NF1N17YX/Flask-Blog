@@ -32,10 +32,10 @@ $ git init
 `flask --app app db init`
 
 # Make initial migration
-flask --app app db migrate -m 'Initial Migration'
+`flask --app app db migrate -m 'Initial Migration'`
 
 # Push the migration to the database
-flask --app app db upgrade
+`flask --app app db upgrade`
 
 # WTF Resources:
 URLs
